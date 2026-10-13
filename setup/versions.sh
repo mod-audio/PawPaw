@@ -8,7 +8,12 @@
 DROBILLA_URL=https://download.drobilla.net
 XIPH_URL=https://downloads.xiph.org/releases
 
-KXSTUDIO_FILES_URL=https://kx.studio/files
+# MOD-owned copies of sources: tarballs on the download mirror, git pins on mod-audio branches
+MOD_MIRROR_URL=https://download.mod.audio/mirror
+MOD_GITHUB_URL=https://github.com/mod-audio
+
+# fallback for every tarball download (setup/functions.sh), was https://kx.studio/files
+KXSTUDIO_FILES_URL=${MOD_MIRROR_URL}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # bootstrap base
@@ -41,7 +46,7 @@ LIBSAMPLERATE_VERSION=0.2.2
 LIBSAMPLERATE_URL=https://github.com/libsndfile/libsamplerate/releases/download/${LIBSAMPLERATE_VERSION}
 
 MINGW_STD_THREADS_VERSION=c931bac289dd431f1dd30fc4a5d1a7be36668073
-MINGW_STD_THREADS_URL=https://github.com/meganz/mingw-std-threads.git
+MINGW_STD_THREADS_URL=${MOD_GITHUB_URL}/mingw-std-threads.git
 
 ZLIB_VERSION=1.3.1
 ZLIB_URL=https://github.com/madler/zlib/releases/download/v${ZLIB_VERSION}
@@ -91,7 +96,7 @@ LIBFFI_URL=https://github.com/libffi/libffi/releases/download/v${LIBFFI_VERSION}
 
 # FIXME wrong downloads?
 # GLIB_URL=https://download.gnome.org/sources/glib/${GLIB_MVERSION}
-GLIB_URL=${KXSTUDIO_FILES_URL}
+GLIB_URL=${MOD_MIRROR_URL}
 
 LIBLO_VERSION=0.32
 LIBLO_URL=http://download.sourceforge.net/liblo
@@ -116,16 +121,16 @@ LILV_URL=${DROBILLA_URL}
 
 LV2LINT_VERSION=0.16.2
 # NOTE upstream host is often down
-LV2LINT_URL=${KXSTUDIO_FILES_URL}
+LV2LINT_URL=${MOD_MIRROR_URL}
 
 DARKGLASS_LV2_EXTENSIONS_VERSION=609166185c301a4a217ab5b60559bda800dd336c # 2025-06-17
 DARKGLASS_LV2_EXTENSIONS_URL=https://github.com/Darkglass-Electronics/LV2-Extensions.git
 
 KXSTUDIO_LV2_EXTENSIONS_VERSION=8b5f6cb9cd75e300958c9aacac253d44c964e80b # 2025-06-17
-KXSTUDIO_LV2_EXTENSIONS_URL=https://github.com/KXStudio/LV2-Extensions.git
+KXSTUDIO_LV2_EXTENSIONS_URL=${MOD_GITHUB_URL}/LV2-Extensions.git
 
 MOD_SDK_VERSION=f4341a6c2b2f50e2eb405b06ce19f9f0b4b1a62b
-MOD_SDK_URL=https://github.com/moddevices/mod-lv2-extensions.git
+MOD_SDK_URL=${MOD_GITHUB_URL}/mod-lv2-extensions.git
 
 FLUIDSYNTH_VERSION=cbe4003d97332d3a443422eab8d2764428e31130 # 2.0.0 # f65c6ba25fb2c7e37c89fc6a4afc5aa645e208c2 # 1.1.11
 FLUIDSYNTH_URL=https://github.com/FluidSynth/fluidsynth.git
@@ -134,7 +139,7 @@ MXML_VERSION=3.3.1
 MXML_URL=https://github.com/michaelrsweet/mxml/releases/download/v${MXML_VERSION}
 
 CARLA_VERSION=66afe24a08790732cc17d81d4b846a1e0cfa0118 # 2.6.x
-CARLA_URL=https://github.com/falkTX/Carla.git
+CARLA_URL=${MOD_GITHUB_URL}/Carla.git
 
 # ---------------------------------------------------------------------------------------------------------------------
 # check if lv2lint is supported
@@ -210,9 +215,9 @@ PORTAUDIO_VERSION=19.6.0
 PORTAUDIO_URL=http://deb.debian.org/debian/pool/main/p/portaudio19
 
 RTAUDIO_VERSION=e03448bd15c1c34e842459939d755f5f89e880ed
-RTAUDIO_URL=https://github.com/falkTX/rtaudio.git
+RTAUDIO_URL=${MOD_GITHUB_URL}/rtaudio.git
 
 TRE_VERSION=6092368aabdd0dbb0fbceb2766a37b98e0ff6911
-TRE_URL=https://github.com/laurikari/tre.git
+TRE_URL=${MOD_GITHUB_URL}/tre.git
 
 # ---------------------------------------------------------------------------------------------------------------------

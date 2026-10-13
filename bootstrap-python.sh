@@ -317,7 +317,7 @@ fi
 # ---------------------------------------------------------------------------------------------------------------------
 # cxfreeze
 
-git_clone cx_Freeze "${CXFREEZE_VERSION}" "https://github.com/anthony-tuininga/cx_Freeze.git"
+git_clone cx_Freeze "${CXFREEZE_VERSION}" "${MOD_GITHUB_URL}/cx_Freeze.git"
 build_python cx_Freeze "${CXFREEZE_VERSION}"
 
 if [ "${WIN32}" -eq 1 ] && [ "${CROSS_COMPILING}" -eq 1 ]; then

@@ -56,7 +56,7 @@ build_cmake armadillo "${ARMADILLO_VERSION}" "${ARMADILLO_EXTRAFLAGS}"
 # hylia
 
 HYLIA_VERSION="6421909123974ffd431ace47589975f5929bc746"
-HYLIA_URL="https://github.com/falkTX/hylia.git"
+HYLIA_URL="${MOD_GITHUB_URL}/Hylia.git"
 
 HYLIA_EXTRAFLAGS="NOOPT=true"
 
@@ -67,7 +67,7 @@ build_make hylia "${HYLIA_VERSION}" "${HYLIA_EXTRAFLAGS}"
 # jack2
 
 JACK2_VERSION="e3060021cd53fcd8316593c6cf6dc7ed5f127777"
-JACK2_URL="https://github.com/mod-audio/jack2.git"
+JACK2_URL="${MOD_GITHUB_URL}/jack2.git"
 
 JACK2_EXTRAFLAGS=""
 JACK2_EXTRAFLAGS+=" --autostart=none"
@@ -144,7 +144,7 @@ build_meson jack-example-tools "${JACK_EXAMPLE_TOOLS_VERSION}" "${JACK_EXAMPLE_T
 if [ -z "${PAWPAW_SKIP_JUCE}" ] || [ "${PAWPAW_SKIP_JUCE}" -eq 0 ]; then
 
 JUCE_6_0_VERSION="24b7e3b2b2c4713d53163b58aed8f79a605218e9"
-JUCE_6_0_URL="https://github.com/DISTRHO/JUCE.git"
+JUCE_6_0_URL="${MOD_GITHUB_URL}/JUCE.git"
 
 JUCE_6_0_EXTRAFLAGS=""
 JUCE_6_0_EXTRAFLAGS+=" -DCMAKE_INSTALL_PREFIX=${PAWPAW_PREFIX}"
@@ -166,7 +166,7 @@ fi # PAWPAW_SKIP_JUCE
 if [ -z "${PAWPAW_SKIP_JUCE}" ] || [ "${PAWPAW_SKIP_JUCE}" -eq 0 ]; then
 
 JUCE_6_1_VERSION="2cf0224df33e52ebbaebacc9a846d2be26cdcbcb"
-JUCE_6_1_URL="https://github.com/DISTRHO/JUCE.git"
+JUCE_6_1_URL="${MOD_GITHUB_URL}/JUCE.git"
 
 JUCE_6_1_EXTRAFLAGS=""
 JUCE_6_1_EXTRAFLAGS+=" -DCMAKE_INSTALL_PREFIX=${PAWPAW_PREFIX}"
@@ -188,7 +188,7 @@ fi # PAWPAW_SKIP_JUCE
 if [ -z "${PAWPAW_SKIP_JUCE}" ] || [ "${PAWPAW_SKIP_JUCE}" -eq 0 ]; then
 
 JUCE_7_0_VERSION="32979563345db3995e15d5c489b6a240db16b740"
-JUCE_7_0_URL="https://github.com/DISTRHO/JUCE.git"
+JUCE_7_0_URL="${MOD_GITHUB_URL}/JUCE.git"
 
 JUCE_7_0_EXTRAFLAGS=""
 JUCE_7_0_EXTRAFLAGS+=" -DCMAKE_INSTALL_PREFIX=${PAWPAW_PREFIX}"
@@ -207,7 +207,7 @@ fi # PAWPAW_SKIP_JUCE
 # lvtk1
 
 LVTK1_VERSION="c105fd5077b4f7d963ad543b9979b94b9b052551"
-LVTK1_URL="https://github.com/lvtk/lvtk.git"
+LVTK1_URL="${MOD_GITHUB_URL}/lvtk.git"
 
 LVTK1_EXTRAFLAGS=""
 LVTK1_EXTRAFLAGS+=" --disable-examples"
@@ -228,7 +228,7 @@ build_waf lvtk1 "${LVTK1_VERSION}" "${LVTK1_EXTRAFLAGS}"
 # lvtk
 
 LVTK_VERSION="6bfe981dfb5b27ea199dd4f6801b5305ca0355f9"
-LVTK_URL="https://github.com/lvtk/lvtk.git"
+LVTK_URL="${MOD_GITHUB_URL}/lvtk.git"
 
 LVTK_EXTRAFLAGS=""
 LVTK_EXTRAFLAGS+=" --disable-examples"

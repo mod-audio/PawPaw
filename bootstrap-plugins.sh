@@ -658,7 +658,12 @@ CARLA_EXTRAFLAGS+=" USING_JUCE_AUDIO_DEVICES=false"
 CARLA_EXTRAFLAGS+=" USING_JUCE_GUI_EXTRA=false"
 CARLA_EXTRAFLAGS+=" USING_RTAUDIO=false"
 
+# carla pulls Carla-Plugins as a submodule, fetch it from the mod-audio fork too
+export GIT_CONFIG_COUNT=1
+export GIT_CONFIG_KEY_0="url.${MOD_GITHUB_URL}/Carla-Plugins.insteadOf"
+export GIT_CONFIG_VALUE_0="https://github.com/falkTX/Carla-Plugins"
 git_clone carla "${CARLA_VERSION}" "${CARLA_URL}"
+unset GIT_CONFIG_COUNT GIT_CONFIG_KEY_0 GIT_CONFIG_VALUE_0
 build_make carla "${CARLA_VERSION}" "${CARLA_EXTRAFLAGS}"
 
 fi # WASM
